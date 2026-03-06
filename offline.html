@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offline — Mrs. Sujatha Malani</title>
+<style>
+* { margin:0;padding:0;box-sizing:border-box; }
+body { font-family:'Segoe UI',sans-serif;background:#100d0e;color:#faf0f2;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px; }
+.wrap { max-width:380px; }
+.ico { font-size:72px;margin-bottom:24px;animation:float 3s ease-in-out infinite; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+h1 { font-size:26px;font-weight:700;margin-bottom:12px;background:linear-gradient(135deg,#c9848a,#f0b8bc,#d4a843);-webkit-background-clip:text;-webkit-text-fill-color:transparent; }
+p { color:rgba(250,240,242,.6);font-size:14px;line-height:1.7;margin-bottom:28px; }
+.btn { display:inline-block;background:linear-gradient(135deg,#c9848a,#d4a843);color:#100d0e;padding:14px 36px;font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;cursor:pointer; }
+.contact { margin-top:28px;color:rgba(250,240,242,.5);font-size:12px; }
+.contact a { color:#c9848a;text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="ico">📶</div>
+  <h1>Internet නැත</h1>
+  <p>ඔබ offline ලෙස ඇත. Internet connection check කරන්න.<br><br>Mrs. Sujatha Malani ගේ website නැවත online වූ පසු ක්‍රියා කරනු ඇත.</p>
+  <button class="btn" onclick="location.reload()">🔄 Try Again</button>
+  <div class="contact">
+    📞 Direct Call: <a href="tel:+94770000000">+94 77 000 0000</a><br>
+    💬 <a href="https://wa.me/94770000000">WhatsApp Order</a>
+  </div>
+</div>
+</body>
+</html>

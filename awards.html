@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#c9848a">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Awards — Mrs. Sujatha Malani M.Ed.</title>
+<style>
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --rg:#c9848a;--rg-light:#f0b8bc;--rg-deep:#a05560;
+  --gold:#d4a843;--gold-pale:#f5e6b8;
+  --black:#080608;--dark:#100d0e;--dark2:#1a1518;--dark3:#251e22;--dark4:#2e2530;
+  --cream:#faf0f2;--muted:#7a6870;
+  --grad-rg:linear-gradient(135deg,#c9848a 0%,#f0b8bc 40%,#d4a843 70%,#c9848a 100%);
+  --glow-rg:0 0 40px rgba(201,132,138,0.35);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--dark);color:var(--cream);overflow-x:hidden;cursor:none}
+#cur{position:fixed;width:10px;height:10px;background:var(--rg);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen}
+#curR{position:fixed;width:32px;height:32px;border:1px solid var(--rg-light);border-radius:50%;pointer-events:none;z-index:9998;transition:all .25s;opacity:.55}
+#sparks{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.sp{position:absolute;border-radius:50%;opacity:0;animation:sparkle linear infinite}
+@keyframes sparkle{0%{opacity:0;transform:translateY(100vh) scale(0)}15%{opacity:.7}85%{opacity:.2}100%{opacity:0;transform:translateY(-80px) scale(1.8)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(8,6,8,0.9);backdrop-filter:blur(24px);border-bottom:1px solid rgba(201,132,138,.15)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;background:var(--grad-rg);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px;text-decoration:none}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{color:rgba(250,240,242,.7);text-decoration:none;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;position:relative;transition:color .3s}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--rg-light);transition:width .35s}
+.nav-links a:hover,.nav-links a.active{color:var(--rg-light)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.btn-rg{background:var(--grad-rg);color:var(--black);border:none;padding:16px 40px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:800;cursor:none;font-family:'Montserrat',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:10px;position:relative;overflow:hidden;transition:all .3s;box-shadow:var(--glow-rg)}
+.btn-rg::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.2);transform:translateX(-100%);transition:.45s}
+.btn-rg:hover::before{transform:translateX(0)}
+.btn-ghost{background:transparent;color:var(--rg-light);border:1px solid rgba(201,132,138,.5);padding:16px 40px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;cursor:none;font-family:'Montserrat',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all .3s}
+.btn-ghost:hover{background:rgba(201,132,138,.12);border-color:var(--rg)}
+.sec{position:relative;z-index:1}
+.sechd{text-align:center;margin-bottom:60px}
+.seceye{display:flex;align-items:center;justify-content:center;gap:14px;font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--rg-light);margin-bottom:14px}
+.seceye::before,.seceye::after{content:'';width:36px;height:1px;background:var(--rg);opacity:.5}
+.sectitle{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,54px);font-weight:700;line-height:1.1}
+.sectitle .it{font-style:italic;color:var(--rg-light)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.tag{background:transparent;border:1px solid rgba(201,132,138,.28);color:var(--rg-light);padding:7px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s;cursor:default}
+.tag:hover{background:rgba(201,132,138,.15);border-color:var(--rg)}
+.rv{opacity:0;transform:translateY(36px);transition:all .75s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+/* PAGE HERO */
+.page-hero{padding:160px 60px 80px;position:relative;overflow:hidden;text-align:center}
+.page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(201,132,138,.12),transparent 65%),var(--dark)}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,132,138,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(201,132,138,.025) 1px,transparent 1px);background-size:55px 55px}
+.page-hero-eye{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--rg-light);margin-bottom:18px;display:flex;align-items:center;justify-content:center;gap:14px;opacity:0;animation:fadeUp .8s ease .2s forwards}
+.page-hero-eye::before,.page-hero-eye::after{content:'';width:36px;height:1px;background:var(--rg);opacity:.5}
+.page-hero-title{font-family:'Playfair Display',serif;font-size:clamp(52px,7vw,96px);font-weight:900;line-height:1;margin-bottom:12px;opacity:0;animation:fadeUp .8s ease .35s forwards}
+.page-hero-title .rg{background:var(--grad-rg);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.page-hero-sub{font-family:'Cormorant Garamond',serif;font-size:20px;color:rgba(250,240,242,.62);max-width:600px;margin:0 auto;line-height:1.8;opacity:0;animation:fadeUp .8s ease .5s forwards}
+.page-hero-line{width:80px;height:1px;background:var(--grad-rg);margin:28px auto 0;opacity:0;animation:fadeUp .8s ease .6s forwards;box-shadow:0 0 14px rgba(201,132,138,.5)}
+/* FOOTER */
+footer{background:var(--dark2);border-top:1px solid rgba(201,132,138,.15);padding:34px 60px;display:flex;align-items:center;justify-content:space-between}
+.flogo{font-family:'Playfair Display',serif;font-size:18px;background:var(--grad-rg);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.fcopy{font-size:11px;color:var(--muted)}
+.flinks{display:flex;gap:20px}
+.flinks a{color:var(--muted);text-decoration:none;font-size:11px;transition:color .2s}
+.flinks a:hover{color:var(--rg-light)}
+@media(max-width:900px){
+  nav{padding:14px 20px}
+  .nav-links{display:none}
+  .page-hero{padding:110px 20px 60px}
+  footer{flex-direction:column;gap:14px;text-align:center}
+}
+
+
+.awards-main{padding:0 60px 120px;background:var(--dark)}
+.awards-container{max-width:1200px;margin:0 auto}
+.award-banner{background:linear-gradient(135deg,rgba(201,132,138,.1),rgba(212,168,67,.07));border:1px solid rgba(201,132,138,.32);padding:36px 48px;text-align:center;position:relative;overflow:hidden;margin-bottom:60px}
+.award-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-rg)}
+.award-banner::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--grad-rg);opacity:.4}
+.ab-eye{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--rg-light);margin-bottom:10px}
+.ab-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:6px}
+.ab-sub{font-size:14px;color:var(--muted);line-height:1.7;max-width:600px;margin:0 auto}
+.agrid-full{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:60px}
+.acard{background:var(--dark2);padding:52px 36px;text-align:center;border:1px solid rgba(201,132,138,.08);position:relative;overflow:hidden;transition:all .4s;cursor:default}
+.acard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-rg);transform:scaleX(0);transition:.4s;transform-origin:left}
+.acard::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,132,138,.04),transparent 70%);opacity:0;transition:.4s}
+.acard:hover{background:var(--dark3);transform:translateY(-6px)}
+.acard:hover::before{transform:scaleX(1)}
+.acard:hover::after{opacity:1}
+.acard.presidential{background:linear-gradient(180deg,rgba(201,132,138,.1),var(--dark2));border-color:rgba(201,132,138,.3)}
+.acard.gold-card{background:linear-gradient(180deg,rgba(212,168,67,.09),var(--dark2));border-color:rgba(212,168,67,.32)}
+.aico{font-size:52px;margin-bottom:20px;display:block;filter:drop-shadow(0 0 12px rgba(201,132,138,.3))}
+.abadge{display:inline-block;background:rgba(201,132,138,.15);border:1px solid rgba(201,132,138,.38);padding:6px 14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rg-light);margin-bottom:16px}
+.abadge.gold-b{background:rgba(212,168,67,.15);border-color:rgba(212,168,67,.4);color:var(--gold)}
+.atitle{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:8px}
+.asub{font-size:11px;color:var(--rg);letter-spacing:1.5px;font-style:italic;margin-bottom:12px}
+.asub.gold-t{color:var(--gold)}
+.adesc2{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--muted);line-height:1.75}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:80px}
+.stat-card{background:var(--dark2);padding:44px 24px;text-align:center;border:1px solid rgba(201,132,138,.1);transition:all .3s;cursor:default;position:relative;overflow:hidden}
+.stat-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--grad-rg);transform:scaleX(0);transition:.35s}
+.stat-card:hover{border-color:rgba(201,132,138,.35);background:var(--dark3)}
+.stat-card:hover::after{transform:scaleX(1)}
+.stat-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--rg-light);line-height:1;margin-bottom:6px}
+.stat-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+.recognition-section{padding-top:60px;border-top:1px solid rgba(201,132,138,.1)}
+.rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.rec-card{background:var(--dark2);border:1px solid rgba(201,132,138,.1);padding:32px;display:flex;gap:22px;transition:all .3s;cursor:default}
+.rec-card:hover{border-color:rgba(201,132,138,.3);background:var(--dark3);transform:translateX(5px)}
+.rec-ico{font-size:36px;flex-shrink:0}
+.rec-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;margin-bottom:6px}
+.rec-desc{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--muted);line-height:1.7}
+@media(max-width:900px){
+  .awards-main{padding:0 20px 80px}
+  .agrid-full{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .rec-grid{grid-template-columns:1fr}
+  .award-banner{padding:24px 20px}
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="curR"></div>
+<div id="sparks"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">✦ Sujatha Malani</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" id="nav-about">About</a></li>
+    <li><a href="awards.html" id="nav-awards">Awards</a></li>
+    <li><a href="books.html" id="nav-books">Books</a></li>
+    <li><a href="reviews.html" id="nav-reviews">Reviews</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div style="position:relative;z-index:2">
+    <div class="page-hero-eye">Honours · සම්මාන</div>
+    <h1 class="page-hero-title">Presidential <span class="rg">Awards</span></h1>
+    <p class="page-hero-sub">ශ්‍රී ලංකා ජනාධිපතිතුමා විසින් පිරිනමනු ලබන ශ්‍රේෂ්ඨතම ජාතික ගෞරව</p>
+    <div class="page-hero-line"></div>
+  </div>
+</div>
+
+<section class="awards-main sec">
+  <div class="awards-container">
+
+    <!-- BANNER -->
+    <div class="award-banner rv">
+      <div class="ab-eye">🇱🇰 ශ්‍රී ලංකා ජනාධිපති — Presidential Honours</div>
+      <div class="ab-title">ශ්‍රී ලංකා ජනාධිපතිතුමා විසින් පිරිනමනු ලබන ශ්‍රේෂ්ඨතම ගෞරව</div>
+      <div class="ab-sub" style="margin-top:8px">Highest national recognition awarded by the President of Sri Lanka to exemplary educators and school principals who have served the nation with distinction</div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid" style="margin-bottom:60px">
+      <div class="stat-card rv"><div class="stat-num">3</div><div class="stat-lbl">Presidential Awards</div></div>
+      <div class="stat-card rv"><div class="stat-num">12</div><div class="stat-lbl">Books Published</div></div>
+      <div class="stat-card rv"><div class="stat-num">50K+</div><div class="stat-lbl">Books Sold Island-wide</div></div>
+      <div class="stat-card rv"><div class="stat-num">15+</div><div class="stat-lbl">Years of Excellence</div></div>
+    </div>
+
+    <!-- PRESIDENTIAL AWARDS -->
+    <div class="sechd rv" style="margin-bottom:30px">
+      <div class="seceye">ජනාධිපති සම්මාන · Presidential Awards</div>
+      <h2 class="sectitle">සම්මාන හා <span class="it">ගෞරව</span></h2>
+    </div>
+    <div class="agrid-full">
+      <div class="acard presidential rv">
+        <span class="aico">🏫</span>
+        <div class="abadge">රාජ්‍ය සේවා සම්මාන</div>
+        <div class="atitle">ශ්‍රී ලංකා විදුහල්පති සේවය</div>
+        <div class="asub">Sri Lanka Viduhalpathi Sewaya</div>
+        <div class="adesc2">ශ්‍රී ලංකා ගුරු සේවයේ විදුහල්පති පත්වීම — ජාතික අධ්‍යාපන ක්ෂේත්‍රයේ ශ්‍රේෂ්ඨ සේවා කළ ගුරු නායකයන්ට පිරිනමනු ලබන ඉහළම රාජ්‍ය පිළිගැනීම. ශ්‍රේෂ්ඨ ගුරු නිර්නිදෙසකට ලැබෙන ජාතික ශිඛරය.</div>
+      </div>
+      <div class="acard gold-card rv">
+        <span class="aico">👑</span>
+        <div class="abadge gold-b">ජනාධිපති සම්මාන</div>
+        <div class="atitle">විද්‍යා පාරතප</div>
+        <div class="asub gold-t">Vidya Parathapa</div>
+        <div class="adesc2">ශ්‍රී ලංකා ජනාධිපතිතුමා විසින් ගුරු විදුහල්පතිවරුන් සඳහා පිරිනමනු ලබන ජනාධිපති සම්මානය — ශ්‍රේෂ්ඨ ශෛලීය ගෞරවය. ජාතිය සේවය කළ ශ්‍රේෂ්ඨ ගුරු නායකයන්ගේ ජීවිතයේ ශිඛරය.</div>
+      </div>
+      <div class="acard presidential rv">
+        <span class="aico">🌟</span>
+        <div class="abadge">ජනාධිපති සම්මාන</div>
+        <div class="atitle">විද්‍යා කීර්ති ශ්‍රී</div>
+        <div class="asub">Vidya Kirithi Sri</div>
+        <div class="adesc2">ශ්‍රී ලංකා ජනාධිපතිතුමා විසින් ගුරු විදුහල්පතිවරුන් සඳහා පිරිනමනු ලබන ජනාධිපති සම්මානය — ජාතික ශ්‍රේෂ්ඨත්වයේ ශිඛරය. ගෞරවාන්විත ජාතික ශ්‍රේෂ්ඨ ගෞරව.</div>
+      </div>
+    </div>
+
+    <!-- ADDITIONAL RECOGNITION -->
+    <div class="recognition-section">
+      <div class="sechd rv" style="margin-bottom:36px">
+        <div class="seceye">Additional Achievements · වෙනත් ජය</div>
+        <h2 class="sectitle">Excellence in <span class="it">Education</span></h2>
+      </div>
+      <div class="rec-grid">
+        <div class="rec-card rv">
+          <div class="rec-ico">📚</div>
+          <div>
+            <div class="rec-title">Published Author · ලේඛිකා</div>
+            <div class="rec-desc">12+ educational books published and distributed island-wide. Helping hundreds of thousands of students across Sri Lanka achieve academic excellence in O/L and A/L examinations.</div>
+          </div>
+        </div>
+        <div class="rec-card rv">
+          <div class="rec-ico">🎓</div>
+          <div>
+            <div class="rec-title">Master of Education · M.Ed.</div>
+            <div class="rec-desc">Highest academic qualification in education — M.Ed. — equipping her with the deepest expertise in pedagogy, curriculum design, school leadership and educational policy.</div>
+          </div>
+        </div>
+        <div class="rec-card rv">
+          <div class="rec-ico">👩‍🏫</div>
+          <div>
+            <div class="rec-title">Principal · ගුරු විදුහල්පති</div>
+            <div class="rec-desc">Serving as a distinguished school principal in the Southern Province, guiding 3,000+ students and educators with vision, compassion and unwavering dedication.</div>
+          </div>
+        </div>
+        <div class="rec-card rv">
+          <div class="rec-ico">🇱🇰</div>
+          <div>
+            <div class="rec-title">National Contribution · ජාතික සේවය</div>
+            <div class="rec-desc">Decades of national service through education, mentorship and authorship — transforming lives across Sri Lanka from Matara, Arachi to the entire island.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="flogo">✦ Mrs. Sujatha Malani M.Ed.</div>
+  <div class="fcopy">© 2025 Mrs. Sujatha Malani · ගුරු විදුහල්පති · Matara, Arachi · Sri Lanka</div>
+  <div class="flinks">
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/94770000000" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+
+<script>
+
+// Cursor
+const cur=document.getElementById('cur'),curR=document.getElementById('curR');
+document.addEventListener('mousemove',e=>{
+  cur.style.left=(e.clientX-5)+'px';cur.style.top=(e.clientY-5)+'px';
+  setTimeout(()=>{curR.style.left=(e.clientX-16)+'px';curR.style.top=(e.clientY-16)+'px';},70);
+});
+// Sparkles
+const sp=document.getElementById('sparks');
+for(let i=0;i<35;i++){
+  const p=document.createElement('div');p.className='sp';
+  const isGold=Math.random()>.55;
+  p.style.cssText=`left:${Math.random()*100}%;width:${1+Math.random()*3}px;height:${1+Math.random()*3}px;animation-duration:${9+Math.random()*16}s;animation-delay:${Math.random()*18}s;background:${isGold?'#d4a843':'#f0b8bc'}`;
+  sp.appendChild(p);
+}
+// Reveal
+const obs=new IntersectionObserver(en=>en.forEach(e=>e.isIntersecting&&e.target.classList.add('vis')),{threshold:.1});
+document.querySelectorAll('.rv').forEach(e=>obs.observe(e));
+// Skill bars
+document.querySelectorAll('.skb-fl').forEach(b=>{
+  const w=b.dataset.w;
+  setTimeout(()=>{b.style.width=w},400);
+});
+// Active nav
+const page=location.pathname.split('/').pop().replace('.html','');
+const nl=document.getElementById('nav-'+page);
+if(nl)nl.classList.add('active');
+
+</script>
+
+<!-- Service Worker Registration -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(r => console.log('SW registered'))
+      .catch(e => console.log('SW error:', e));
+  });
+}
+</script>
+</body>
+</html>

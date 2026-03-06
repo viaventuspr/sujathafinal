@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#c9848a">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Contact — Mrs. Sujatha Malani M.Ed.</title>
+<style>
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --rg:#c9848a;--rg-light:#f0b8bc;--rg-deep:#a05560;
+  --gold:#d4a843;--gold-pale:#f5e6b8;
+  --black:#080608;--dark:#100d0e;--dark2:#1a1518;--dark3:#251e22;--dark4:#2e2530;
+  --cream:#faf0f2;--muted:#7a6870;
+  --grad-rg:linear-gradient(135deg,#c9848a 0%,#f0b8bc 40%,#d4a843 70%,#c9848a 100%);
+  --glow-rg:0 0 40px rgba(201,132,138,0.35);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--dark);color:var(--cream);overflow-x:hidden;cursor:none}
+#cur{position:fixed;width:10px;height:10px;background:var(--rg);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen}
+#curR{position:fixed;width:32px;height:32px;border:1px solid var(--rg-light);border-radius:50%;pointer-events:none;z-index:9998;transition:all .25s;opacity:.55}
+#sparks{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.sp{position:absolute;border-radius:50%;opacity:0;animation:sparkle linear infinite}
+@keyframes sparkle{0%{opacity:0;transform:translateY(100vh) scale(0)}15%{opacity:.7}85%{opacity:.2}100%{opacity:0;transform:translateY(-80px) scale(1.8)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(8,6,8,0.9);backdrop-filter:blur(24px);border-bottom:1px solid rgba(201,132,138,.15)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;background:var(--grad-rg);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px;text-decoration:none}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{color:rgba(250,240,242,.7);text-decoration:none;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;position:relative;transition:color .3s}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--rg-light);transition:width .35s}
+.nav-links a:hover,.nav-links a.active{color:var(--rg-light)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.btn-rg{background:var(--grad-rg);color:var(--black);border:none;padding:16px 40px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:800;cursor:none;font-family:'Montserrat',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:10px;position:relative;overflow:hidden;transition:all .3s;box-shadow:var(--glow-rg)}
+.btn-rg::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.2);transform:translateX(-100%);transition:.45s}
+.btn-rg:hover::before{transform:translateX(0)}
+.btn-ghost{background:transparent;color:var(--rg-light);border:1px solid rgba(201,132,138,.5);padding:16px 40px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;cursor:none;font-family:'Montserrat',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all .3s}
+.btn-ghost:hover{background:rgba(201,132,138,.12);border-color:var(--rg)}
+.sec{position:relative;z-index:1}
+.sechd{text-align:center;margin-bottom:60px}
+.seceye{display:flex;align-items:center;justify-content:center;gap:14px;font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--rg-light);margin-bottom:14px}
+.seceye::before,.seceye::after{content:'';width:36px;height:1px;background:var(--rg);opacity:.5}
+.sectitle{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,54px);font-weight:700;line-height:1.1}
+.sectitle .it{font-style:italic;color:var(--rg-light)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.tag{background:transparent;border:1px solid rgba(201,132,138,.28);color:var(--rg-light);padding:7px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s;cursor:default}
+.tag:hover{background:rgba(201,132,138,.15);border-color:var(--rg)}
+.rv{opacity:0;transform:translateY(36px);transition:all .75s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+/* PAGE HERO */
+.page-hero{padding:160px 60px 80px;position:relative;overflow:hidden;text-align:center}
+.page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(201,132,138,.12),transparent 65%),var(--dark)}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,132,138,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(201,132,138,.025) 1px,transparent 1px);background-size:55px 55px}
+.page-hero-eye{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--rg-light);margin-bottom:18px;display:flex;align-items:center;justify-content:center;gap:14px;opacity:0;animation:fadeUp .8s ease .2s forwards}
+.page-hero-eye::before,.page-hero-eye::after{content:'';width:36px;height:1px;background:var(--rg);opacity:.5}
+.page-hero-title{font-family:'Playfair Display',serif;font-size:clamp(52px,7vw,96px);font-weight:900;line-height:1;margin-bottom:12px;opacity:0;animation:fadeUp .8s ease .35s forwards}
+.page-hero-title .rg{background:var(--grad-rg);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.page-hero-sub{font-family:'Cormorant Garamond',serif;font-size:20px;color:rgba(250,240,242,.62);max-width:600px;margin:0 auto;line-height:1.8;opacity:0;animation:fadeUp .8s ease .5s forwards}
+.page-hero-line{width:80px;height:1px;background:var(--grad-rg);margin:28px auto 0;opacity:0;animation:fadeUp .8s ease .6s forwards;box-shadow:0 0 14px rgba(201,132,138,.5)}
+/* FOOTER */
+footer{background:var(--dark2);border-top:1px solid rgba(201,132,138,.15);padding:34px 60px;display:flex;align-items:center;justify-content:space-between}
+.flogo{font-family:'Playfair Display',serif;font-size:18px;background:var(--grad-rg);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.fcopy{font-size:11px;color:var(--muted)}
+.flinks{display:flex;gap:20px}
+.flinks a{color:var(--muted);text-decoration:none;font-size:11px;transition:color .2s}
+.flinks a:hover{color:var(--rg-light)}
+@media(max-width:900px){
+  nav{padding:14px 20px}
+  .nav-links{display:none}
+  .page-hero{padding:110px 20px 60px}
+  footer{flex-direction:column;gap:14px;text-align:center}
+}
+
+
+.contact-main{padding:0 60px 120px;background:var(--dark)}
+.contact-container{max-width:1100px;margin:0 auto}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:70px}
+.contact-info h2{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;margin-bottom:20px}
+.contact-info h2 span{font-style:italic;color:var(--rg-light)}
+.contact-info p{font-family:'Cormorant Garamond',serif;font-size:18px;color:rgba(250,240,242,.68);line-height:1.9;margin-bottom:30px}
+.contact-cards{display:flex;flex-direction:column;gap:14px}
+.ccontact-card{display:flex;align-items:center;gap:18px;background:var(--dark2);border:1px solid rgba(201,132,138,.12);padding:20px 22px;transition:all .3s;text-decoration:none;cursor:none}
+.ccontact-card:hover{border-color:rgba(201,132,138,.4);background:var(--dark3);transform:translateX(6px)}
+.ccontact-ico{font-size:26px;flex-shrink:0;width:50px;height:50px;border-radius:50%;background:rgba(201,132,138,.1);display:flex;align-items:center;justify-content:center}
+.ccontact-lbl{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rg);margin-bottom:4px}
+.ccontact-val{font-size:15px;font-weight:600;color:var(--cream)}
+.ccontact-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.wa-big-card{background:linear-gradient(135deg,rgba(37,211,102,.08),rgba(18,140,62,.05));border:2px solid rgba(37,211,102,.3);padding:40px;margin-bottom:14px;display:flex;align-items:center;gap:22px;text-decoration:none;cursor:none;transition:all .3s}
+.wa-big-card:hover{border-color:rgba(37,211,102,.6);box-shadow:0 0 40px rgba(37,211,102,.2);transform:translateY(-3px)}
+.wa-big-ico{font-size:44px;flex-shrink:0}
+.wa-big-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#25d366;margin-bottom:6px}
+.wa-big-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.wa-big-btn{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#111;padding:11px 24px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;font-family:'Montserrat',sans-serif}
+.contact-form-card{background:var(--dark2);border:1px solid rgba(201,132,138,.15);padding:48px}
+.contact-form-card::before{content:'';display:block;height:2px;background:var(--grad-rg);margin-bottom:36px}
+.form-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:24px}
+.fg{margin-bottom:18px}
+.fl{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--rg);margin-bottom:8px}
+.fi,.fs,.fta{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(201,132,138,.18);color:var(--cream);padding:13px 16px;font-size:13px;font-family:'Montserrat',sans-serif;outline:none;transition:border-color .3s}
+.fi:focus,.fs:focus,.fta:focus{border-color:var(--rg)}
+.fs option{background:var(--dark2)}
+.fta{resize:vertical;min-height:120px}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sbtn{width:100%;background:var(--grad-rg);color:var(--black);border:none;padding:16px;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:800;cursor:none;font-family:'Montserrat',sans-serif;transition:opacity .3s;box-shadow:var(--glow-rg);margin-top:8px}
+.sbtn:hover{opacity:.88}
+.map-placeholder{background:var(--dark2);border:1px solid rgba(201,132,138,.12);height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;margin-top:60px}
+.map-ph-ico{font-size:44px}
+.map-ph-text{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--rg-light)}
+.map-ph-sub{font-size:13px;color:var(--muted)}
+.success-msg{display:none;text-align:center;padding:30px;background:rgba(201,132,138,.08);border:1px solid rgba(201,132,138,.3)}
+.success-msg .si{font-size:44px;margin-bottom:10px}
+.success-msg .st{font-family:'Playfair Display',serif;font-size:22px;color:var(--rg-light);margin-bottom:8px}
+.success-msg .sd{font-size:14px;color:var(--muted);line-height:1.7}
+@media(max-width:900px){
+  .contact-main{padding:0 20px 80px}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .fr2{grid-template-columns:1fr}
+  .contact-form-card{padding:28px 20px}
+  .wa-big-card{flex-direction:column;text-align:center}
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="curR"></div>
+<div id="sparks"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">✦ Sujatha Malani</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" id="nav-about">About</a></li>
+    <li><a href="awards.html" id="nav-awards">Awards</a></li>
+    <li><a href="books.html" id="nav-books">Books</a></li>
+    <li><a href="reviews.html" id="nav-reviews">Reviews</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div style="position:relative;z-index:2">
+    <div class="page-hero-eye">Contact · සම්බන්ධ වන්න</div>
+    <h1 class="page-hero-title">Get in <span class="rg">Touch</span></h1>
+    <p class="page-hero-sub">ග්‍රන්ථ order, bulk enquiry හෝ ඕනෑම කාරණයකට — Mrs. Sujatha Malani සම්බන්ධ කරගන්න</p>
+    <div class="page-hero-line"></div>
+  </div>
+</div>
+
+<section class="contact-main sec">
+  <div class="contact-container">
+    <div class="contact-grid">
+
+      <!-- LEFT: INFO -->
+      <div>
+        <div class="contact-info rv">
+          <div class="seceye" style="justify-content:flex-start;margin-bottom:16px">Contact Info</div>
+          <h2>සම්බන්ධ <span>කරගන්න</span></h2>
+          <p>ග්‍රන්ථ order කිරීමට, bulk enquiry සඳහා හෝ ඕනෑම කාරණයකට — WhatsApp හෝ email ඔස්සේ Mrs. Sujatha Malani ගේ team සම්බන්ධ කරගන්න.</p>
+        </div>
+
+        <!-- WHATSAPP BIG -->
+        <a href="https://wa.me/94770000000?text=Hello%20Mrs.%20Sujatha%20Malani%2C%20I%20would%20like%20to%20contact%20you." target="_blank" class="wa-big-card rv">
+          <div class="wa-big-ico">💬</div>
+          <div>
+            <div class="wa-big-title">WhatsApp — Best Way to Reach Us</div>
+            <div class="wa-big-desc">ක්ෂණික reply · Island-wide book orders · Bulk enquiries · 24hr response</div>
+            <div class="wa-big-btn">💬 Chat on WhatsApp</div>
+          </div>
+        </a>
+
+        <div class="contact-cards">
+          <div class="ccontact-card rv">
+            <div class="ccontact-ico">👩‍🏫</div>
+            <div>
+              <div class="ccontact-lbl">Name · නම</div>
+              <div class="ccontact-val">Mrs. Sujatha Malani</div>
+              <div class="ccontact-sub">M.Ed. · ගුරු විදුහල්පති</div>
+            </div>
+          </div>
+          <a href="tel:+94770000000" class="ccontact-card rv">
+            <div class="ccontact-ico">📞</div>
+            <div>
+              <div class="ccontact-lbl">Phone · දුරකථනය</div>
+              <div class="ccontact-val">+94 77 000 0000</div>
+              <div class="ccontact-sub">WhatsApp & Call</div>
+            </div>
+          </a>
+          <a href="mailto:sujathamalani@edu.lk" class="ccontact-card rv">
+            <div class="ccontact-ico">✉️</div>
+            <div>
+              <div class="ccontact-lbl">Email</div>
+              <div class="ccontact-val">sujathamalani@edu.lk</div>
+              <div class="ccontact-sub">Book Orders & Enquiries</div>
+            </div>
+          </a>
+          <div class="ccontact-card rv">
+            <div class="ccontact-ico">📍</div>
+            <div>
+              <div class="ccontact-lbl">Location · ලිපිනය</div>
+              <div class="ccontact-val">Matara, Arachi</div>
+              <div class="ccontact-sub">දකුණු පළාත · Southern Province, Sri Lanka</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-placeholder rv">
+          <div class="map-ph-ico">📍</div>
+          <div class="map-ph-text">Matara, Arachi</div>
+          <div class="map-ph-sub">Southern Province · Sri Lanka</div>
+          <div class="tags" style="justify-content:center;margin-top:8px">
+            <span class="tag">Island-wide Delivery</span>
+            <span class="tag">Cash on Delivery</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div>
+        <div class="contact-form-card rv">
+          <div class="form-title">Send a Message</div>
+          <div id="contactForm">
+            <div class="fr2">
+              <div class="fg"><label class="fl">Full Name</label><input class="fi" id="cf-name" placeholder="Your full name"></div>
+              <div class="fg"><label class="fl">Phone</label><input class="fi" id="cf-phone" placeholder="+94 77 000 0000"></div>
+            </div>
+            <div class="fg"><label class="fl">Email</label><input class="fi" id="cf-email" type="email" placeholder="your@email.com"></div>
+            <div class="fg">
+              <label class="fl">Enquiry Type</label>
+              <select class="fs" id="cf-type">
+                <option>Book Order</option>
+                <option>Bulk Order</option>
+                <option>General Enquiry</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label class="fl">Message</label><textarea class="fta" id="cf-msg" placeholder="Your message — ඔබගේ message..."></textarea></div>
+            <button class="sbtn" onclick="sendContactMsg()">✉️ Send Message</button>
+          </div>
+          <div class="success-msg" id="cf-success">
+            <div class="si">✅</div>
+            <div class="st">Message Sent! 🎉</div>
+            <div class="sd">ඔබගේ message ලැබිණ!<br>Mrs. Sujatha Malani ගේ team 24 hours ඇතුළත reply කරනු ඇත.<br><br>📞 +94 77 000 0000</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function sendContactMsg(){
+  const name=document.getElementById('cf-name').value;
+  const phone=document.getElementById('cf-phone').value;
+  const email=document.getElementById('cf-email').value;
+  const type=document.getElementById('cf-type').value;
+  const msg=document.getElementById('cf-msg').value;
+  if(!name||!msg){alert('Please fill in your name and message.');return;}
+  const waMsg=`Hello Mrs. Sujatha Malani 👋\n\nNew Enquiry:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nType: ${type}\nMessage: ${msg}`;
+  window.open('https://wa.me/94770000000?text='+encodeURIComponent(waMsg),'_blank');
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('cf-success').style.display='block';
+}
+</script>
+
+
+
+<footer>
+  <div class="flogo">✦ Mrs. Sujatha Malani M.Ed.</div>
+  <div class="fcopy">© 2025 Mrs. Sujatha Malani · ගුරු විදුහල්පති · Matara, Arachi · Sri Lanka</div>
+  <div class="flinks">
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/94770000000" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+
+<script>
+
+// Cursor
+const cur=document.getElementById('cur'),curR=document.getElementById('curR');
+document.addEventListener('mousemove',e=>{
+  cur.style.left=(e.clientX-5)+'px';cur.style.top=(e.clientY-5)+'px';
+  setTimeout(()=>{curR.style.left=(e.clientX-16)+'px';curR.style.top=(e.clientY-16)+'px';},70);
+});
+// Sparkles
+const sp=document.getElementById('sparks');
+for(let i=0;i<35;i++){
+  const p=document.createElement('div');p.className='sp';
+  const isGold=Math.random()>.55;
+  p.style.cssText=`left:${Math.random()*100}%;width:${1+Math.random()*3}px;height:${1+Math.random()*3}px;animation-duration:${9+Math.random()*16}s;animation-delay:${Math.random()*18}s;background:${isGold?'#d4a843':'#f0b8bc'}`;
+  sp.appendChild(p);
+}
+// Reveal
+const obs=new IntersectionObserver(en=>en.forEach(e=>e.isIntersecting&&e.target.classList.add('vis')),{threshold:.1});
+document.querySelectorAll('.rv').forEach(e=>obs.observe(e));
+// Skill bars
+document.querySelectorAll('.skb-fl').forEach(b=>{
+  const w=b.dataset.w;
+  setTimeout(()=>{b.style.width=w},400);
+});
+// Active nav
+const page=location.pathname.split('/').pop().replace('.html','');
+const nl=document.getElementById('nav-'+page);
+if(nl)nl.classList.add('active');
+
+</script>
+
+<!-- Service Worker Registration -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(r => console.log('SW registered'))
+      .catch(e => console.log('SW error:', e));
+  });
+}
+</script>
+</body>
+</html>
